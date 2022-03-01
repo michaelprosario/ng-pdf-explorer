@@ -1,0 +1,53 @@
+
+
+
+<div id="divProcedureContent">
+  <h1>Procedure content</h1>
+  <ngx-extended-pdf-viewer 
+  [src]="'assets/test.pdf'" 
+  [useBrowserLocale]="true"
+  [textLayer]="true"
+  (updateFindMatchesCount)="updateFindMatchesCount($event)"
+  (updateFindState)="updateFindState($event)"
+  [showHandToolButton]="true"
+  ></ngx-extended-pdf-viewer>  
+  </div>
+  
+  
+  <div id="divGuidanceList">
+        <h1>Expert guidance</h1>
+        <div>
+          <h3>Reporting Changes To Equipment Configuration</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique mi tellus. Vestibulum sit amet facilisis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ornare sed eros vel rutrum. Fusce dapibus enim non erat mattis, quis dapibus nisl congue. Phasellus consequat suscipit magna. Aenean vitae faucibus arcu, vitae euismod libero.</p>
+          <button (click)="viewGuidance('Reporting Changes To Equipment Configuration')">View guidance in context</button>
+          <button (click)="viewMediaGroup('WORKCENTER PMS MANUAL')">Related Media</button>
+        </div>
+        <hr>
+        <div>
+          <h3>WORKCENTER PMS MANUAL</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique mi tellus. Vestibulum sit amet facilisis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ornare sed eros vel rutrum. Fusce dapibus enim non erat mattis, quis dapibus nisl congue. Phasellus consequat suscipit magna. Aenean vitae faucibus arcu, vitae euismod libero.</p>
+          <button (click)="viewGuidance('WORKCENTER PMS MANUAL')">View guidance in context</button>
+          <button (click)="viewMediaGroup('WORKCENTER PMS MANUAL')">Related Media</button>
+        </div>
+        <hr>
+        <div>
+          <h3>Master Cross Reference List (MCRL)</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique mi tellus. Vestibulum sit amet facilisis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ornare sed eros vel rutrum. Fusce dapibus enim non erat mattis, quis dapibus nisl congue. Phasellus consequat suscipit magna. Aenean vitae faucibus arcu, vitae euismod libero.</p>
+          <button (click)="viewGuidance('Master Cross Reference List (MCRL)')">View guidance in context</button>
+          <button (click)="viewMediaGroup('Master Cross Reference List (MCRL)')">Related Media</button>
+        </div>
+        <hr>
+  </div>
+  
+  
+  
+  
+  <div style="display:none">
+  Search text: 
+  <input type="" [(ngModel)]="searchtext">
+  <button (click)="onFind()">Find</button>
+  
+  <hr>
+  Found count: {{totalMatches}}
+  <hr>
+  </div>

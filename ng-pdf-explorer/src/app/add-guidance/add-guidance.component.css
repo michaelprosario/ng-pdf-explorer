@@ -1,0 +1,15 @@
+#divProcedureContent
+{
+  width:1000px;
+}
+
+#divGuidanceList
+{
+  position:absolute;
+  top: 0px;
+  left: 1100px;
+  width:500px;
+  height:900px;
+  overflow: scroll;
+  padding-left:10px;
+}

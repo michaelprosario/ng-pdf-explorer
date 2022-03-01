@@ -1,18 +1,1 @@
-<h1>PDF viewer</h1>
-
-Search text: 
-<input type="" [(ngModel)]="searchtext">
-<button (click)="onFind()">Find</button>
-
-<hr>
-Found count: {{totalMatches}}
-<hr>
-
-<ngx-extended-pdf-viewer 
-[src]="'assets/test.pdf'" 
-[useBrowserLocale]="true"
-[textLayer]="true"
-(updateFindMatchesCount)="updateFindMatchesCount($event)"
-(updateFindState)="updateFindState($event)"
-[showHandToolButton]="true"
-></ngx-extended-pdf-viewer>
+<router-outlet></router-outlet>

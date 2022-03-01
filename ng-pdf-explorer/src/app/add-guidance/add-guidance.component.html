@@ -1,0 +1,44 @@
+<div id="divProcedureContent">
+  <h1>Procedure content</h1>
+  <ngx-extended-pdf-viewer [src]="'assets/test.pdf'" [useBrowserLocale]="true" [textLayer]="true"
+    (updateFindMatchesCount)="updateFindMatchesCount($event)" (updateFindState)="updateFindState($event)"
+    [showHandToolButton]="true"></ngx-extended-pdf-viewer>
+</div>
+
+
+<div id="divGuidanceList">
+  <h1>Add Expert Guidance</h1>
+  
+    <div class="form-group">
+      <label for="exampleInputEmail1">Title:</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter title">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Notes:</label>
+      <textarea class="form-control" style="width:400px; height:200px;"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputEmail1">SOP Search Phrase</label>
+      <input 
+        type="text" class="form-control" id="txtSopKeywordPhrase" 
+        placeholder="Enter keyword phrase"
+        [(ngModel)]="searchtext"
+        >
+    </div>
+    
+    
+    <div *ngIf="totalMatches && totalMatches > 0">
+      Found count: {{totalMatches}}
+    </div>
+      
+
+    <br><br>
+    <button type="submit" class="btn btn-primary">Add Media</button>
+    <img src="/assets/gallery.jpg">
+    <br><br>
+
+
+    <button type="submit" class="btn btn-primary">Add guidance</button>
+</div>
