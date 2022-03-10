@@ -69,4 +69,18 @@ export class AddGuidanceComponent implements OnInit {
       window.open("https://www.youtube.com/results?search_query=" + keyWords);
   }
 
+  windowGetSelection() {
+    let selectionObject: any = '';
+  
+    selectionObject = window.getSelection();
+    
+    return selectionObject.toString();
+  }
+
+  public getSelectedText()
+  {
+    let selectedText = this.windowGetSelection();
+    alert(selectedText);
+  }
+
 }

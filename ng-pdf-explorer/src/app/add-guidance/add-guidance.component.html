@@ -1,8 +1,13 @@
 <div id="divProcedureContent">
   <h1>Procedure content</h1>
-  <ngx-extended-pdf-viewer [src]="'assets/test.pdf'" [useBrowserLocale]="true" [textLayer]="true"
-    (updateFindMatchesCount)="updateFindMatchesCount($event)" (updateFindState)="updateFindState($event)"
-    [showHandToolButton]="true"></ngx-extended-pdf-viewer>
+  <ngx-extended-pdf-viewer [src]="'assets/test.pdf'" 
+    [useBrowserLocale]="true" 
+    [textLayer]="true"
+    (updateFindMatchesCount)="updateFindMatchesCount($event)" 
+    (updateFindState)="updateFindState($event)"
+    [showHandToolButton]="true"
+    [handTool]="false"
+    ></ngx-extended-pdf-viewer>
 </div>
 
 
@@ -36,6 +41,7 @@
 
     <br><br>
     <button type="submit" class="btn btn-primary">Add Media</button>
+    <button type="submit" class="btn btn-primary" (click)="getSelectedText()">Get selected text</button>
     <img src="/assets/gallery.jpg">
     <br><br>
 
